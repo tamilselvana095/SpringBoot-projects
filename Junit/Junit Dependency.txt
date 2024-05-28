@@ -1,0 +1,37 @@
+<dependencies>
+    <dependency>
+        <groupId>org.junit.jupiter</groupId>
+        <artifactId>junit-jupiter</artifactId>
+        <version>5.9.2</version>
+        <scope>test</scope>
+    </dependency>
+    <dependency>
+        <groupId>org.mockito</groupId>
+        <artifactId>mockito-core</artifactId>
+        <version>5.2.0</version>
+        <scope>test</scope>
+    </dependency>
+    <dependency>
+        <groupId>org.mockito</groupId>
+        <artifactId>mockito-junit-jupiter</artifactId>
+        <version>5.2.0</version>
+        <scope>test</scope>
+    </dependency>
+</dependencies>
+
+
+
+1.The junit-jupiter dependency includes the transitive dependencies: junit-jupiter-api, junit-jupiter-params, and unit-jupiter-engine. You need these dependencies to write all kinds of unit tests.
+2.Mockito-core contains everything you need to create mocks inside your tests.
+3.mockito-junit-jupiter offers support for JUnit 5 extension model.
+
+
+<build>
+    <plugins>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <version>3.0.0</version>
+        </plugin>
+    </plugins>
+</build>
